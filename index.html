@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsivo</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Meu Site</h1>
+        <img src="assets/menu.svg" alt="menu icon" id="burguer">
+        <menu>
+            <ul id="Menu">
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ullam nam excepturi dolorum incidunt provident. Temporibus, similique aspernatur distinctio rem voluptatum voluptatibus? Voluptate suscipit corporis rem quibusdam iusto illum explicabo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat numquam beatae est doloribus quasi quidem minus, animi earum. Vel nobis nisi dolorem reiciendis distinctio iusto amet minus ad voluptatibus assumenda?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat facere libero aliquid cum nesciunt atque debitis ea hic animi temporibus ratione pariatur saepe molestiae, asperiores ipsa distinctio maiores vel. Sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quo ex repellendus, voluptatum voluptate voluptatem distinctio ipsa, blanditiis exercitationem, corrupti repudiandae veniam aut delectus quasi consequatur! Optio error nulla autem!</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe impedit non unde animi quibusdam repudiandae vero totam facere neque, aliquam deleniti similique ipsum fugiat debitis temporibus magni cupiditate id consectetur! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima aperiam rem earum aut odit libero nesciunt nobis eaque commodi, deleniti laudantium temporibus ipsum, quasi qui ab iure voluptatem, id ea.</p>
+        </article>
+    </main>
+    <script>
+        let menu = document.querySelector("#Menu")
+        let burguer = document.querySelector("#burguer")
+        function ocultarMostrar(){
+            if(menu.style.display == 'none'){
+                menu.style.display = 'block'
+                burguer.style.borderBottom = 'none'
+                
+            }else{
+                menu.style.display = 'none'
+                burguer.style.borderBottom = '2px solid black'
+            }
+        }
+
+        function mudouTamanho(){
+            if(menu.style.display =="none"){
+                menu.style.display = "block"
+            }
+        }
+
+        burguer.addEventListener('click', ocultarMostrar)
+    </script>
+</body>
+</html>
